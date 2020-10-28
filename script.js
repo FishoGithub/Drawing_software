@@ -1,4 +1,33 @@
-var canvas = document.getElementById('myCanvas')
+var canvas = document.getElementById('myCanvas');
+var clear = document.getElementById('clear');
 
-canvas.width = 1000;
-canvas.height = 700;
+canvas.width = 500;
+canvas.height = 500;
+
+var context = canvas.getContext('2d');
+
+context.fillStyle = 'red';
+context.strokeStyle = 'purple';
+
+function drawHouse() {
+  context.moveTo(200, 400);
+  context.lineTo(250, 350);
+  context.moveTo(250, 350);
+  context.lineTo(300, 400);
+  context.stroke();
+  context.fillRect(200, 400, 100, 100);
+}
+
+function clearScreen() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+canvas.onmousedown = function(e) {
+  let x = e.pageX;
+  let y = e.pageY;
+
+  context.fillRect(x, y, 15, 15);
+
+  console.log('x coordinate is ' + x + '.');
+  console.log('y coordinate is ' + y + '.');
+}
