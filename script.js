@@ -5,6 +5,7 @@ canvas.width = 500;
 canvas.height = 500;
 
 var context = canvas.getContext('2d');
+var mouseDown = false;
 
 context.fillStyle = 'red';
 context.strokeStyle = 'purple';
@@ -18,16 +19,17 @@ function drawHouse() {
   context.fillRect(200, 400, 100, 100);
 }
 
-function clearScreen() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
 canvas.onmousedown = function(e) {
+
   let x = e.pageX;
   let y = e.pageY;
 
-  context.fillRect(x, y, 15, 15);
+  context.fillRect(x-20, y-20, 15, 15);
 
   console.log('x coordinate is ' + x + '.');
   console.log('y coordinate is ' + y + '.');
+}
+
+function clearScreen() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
 }
