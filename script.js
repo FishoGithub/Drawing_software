@@ -30,12 +30,13 @@ function drawHouse() {
   context.fillRect(200, 400, 100, 100);
 }
 
+let x = context.pageX;
+let y = context.pageY;
+
 canvas.onmousedown = function(e) {
 
   let x = e.pageX;
   let y = e.pageY;
-
-  context.fillRect(x-20, y-20, 15, 15);
 
   console.log('x coordinate is ' + x + '.');
   console.log('y coordinate is ' + y + '.');
@@ -48,28 +49,34 @@ function eraserSize() {
 // colors:
 function blueColor() {
   context.fillStyle = 'blue';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 function blackColor() {
   context.fillStyle = 'black';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 function redColor() {
   context.fillStyle = 'red';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 function purpleColor() {
   context.fillStyle = 'purple';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 function yellowColor() {
   context.fillStyle = 'yellow';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 function orangeColor() {
   context.fillStyle = 'orange';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 function pinkColor() {
   context.fillStyle = 'pink';
+  context.fillRect(x-20, y-20, 15, 15);
 }
 
 function eraser() {
-  
   eraserContext.fillStyle = 'white';
   eraserContext.fillRect(eraserContext.pageX -20, eraserContext.pageY -20, 1000, 1000);
 }
