@@ -6,3 +6,19 @@ canvas {
 body {
   background-color: gray;
 }
+
+#red {
+  color: black;
+}
+
+#purple {
+  color: yellow;
+}
+
+#black {
+  color: white;
+}
+
+#blue {
+  color: orange;
+}
